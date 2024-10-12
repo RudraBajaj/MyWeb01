@@ -1,11 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 10;
-    padding: 10;
+    margin: 10px;
+    padding: 10px;
     line-height: 1.7;
-    /* full lenghth */
     color: #383838;
-    /* text color */
 }
 
 header {
@@ -20,12 +18,30 @@ section {
     margin: 10px;
 }
 
-h2,h4 {
+h2, h4 {
     color: #383838;
 }
 
-footer{
+footer {
     background-color: black;
     color: white;
     text-align: center;
+    padding: 10px;
+}
+
+.circular-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #333;
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.circular-img img {
+    width: 100%;
+    height: auto;
 }

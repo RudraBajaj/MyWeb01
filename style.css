@@ -34,18 +34,37 @@ footer {
     padding: 10px;
 }
 
+
+@keyframes glowing-border {
+    0% {
+        box-shadow: 0 0 5px rgba(50, 50, 255, 0.5); /* Dark Blue */
+    }
+    25% {
+        box-shadow: 0 0 10px rgba(50, 50, 255, 1); /* Bright Dark Blue */
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(255, 0, 255, 0.5); /* Dark Magenta */
+    }
+    75% {
+        box-shadow: 0 0 20px rgba(255, 0, 255, 1); /* Bright Dark Magenta */
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(50, 50, 255, 0.5); /* Dark Blue */
+    }
+}
 .circular-img {
     width: 70%;
     max-width: 200px;
-    height: 200px; /* Set height for the effect */
+    height: 200px; 
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid #333;
+    border: 5px solid transparent;
     display: block;
     position: absolute;
     top: 50px;
     right: 50px;
     margin: 0 auto;
+    animation: glowing-border 1.5s infinite alternate;
     background: transparent; /* Or a solid color if you want */
 }
 

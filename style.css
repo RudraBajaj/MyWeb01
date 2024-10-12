@@ -7,8 +7,8 @@ body {
 }
 
 header {
-    background-color: #7dd180;
-    color: white;
+    background-color: transparent;
+    color: #383838;
     padding: 10px;
     text-align: center;
 }
@@ -18,7 +18,12 @@ section {
     margin: 10px;
 }
 
-h2, h4 {
+h2 {
+    font-size: 3em;
+    color: #383838;
+}
+
+h4 {
     color: #383838;
 }
 
@@ -30,8 +35,9 @@ footer {
 }
 
 .circular-img {
-    width: 300px;
-    height: 300px;
+    width: 70%;
+    max-width: 200px;
+    height: 200px; /* Set height for the effect */
     border-radius: 50%;
     overflow: hidden;
     border: 5px solid #333;
@@ -39,8 +45,21 @@ footer {
     position: absolute;
     top: 50px;
     right: 50px;
+    margin: 0 auto;
+    background: transparent; /* Or a solid color if you want */
 }
 
+
+/* Responsive for small screens */
+@media(max-width: 768px) {
+    .circular-img {
+        position: relative;
+        right: 0;
+        margin-top: 20px;
+        width: 50%; /* Adjust size for small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
 .circular-img img {
     width: 100%;
     height: auto;

@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Audiowide');
+/* Header Styles */
+header {
+    background-color: transparent;
+    color: #383838;
+    padding: 10px;
+    text-align: center;
+}
 
+/* Text styles */
 .text {
     display: inline-block;
     transition: color 0.5s, text-shadow 0.5s;
@@ -18,15 +25,9 @@
     justify-content: center;
 }
 
+/* Headings and Paragraphs */
 h2, h4, p {
     color: aliceblue; /* Fully opaque color */
-}
-
-header {
-    background-color: transparent;
-    color: #383838;
-    padding: 10px;
-    text-align: center;
 }
 
 section {

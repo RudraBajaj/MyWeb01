@@ -1,42 +1,19 @@
-/* reset  */
 
 /* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Audiowide');
 
-/* Reset styles to ensure consistency across browsers */
-html, body, h1, h2, h3, h4, p, ul {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+
+/* Prevent horizontal scrolling */
+html{
+    overflow-x: hidden;
 }
 
+/* bg color  */
 body {
-    font-family: Arial, sans-serif;
-    margin: 10px;
-    padding: 10px;
-    line-height: 1.7;
     background-color: RGB(24, 25, 26);
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
 }
 
-
-/* Header Styles */
-header {
-    background-color: transparent;
-    color: #383838;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Text styles */
-.text {
-    display: inline-block;
-    transition: color 0.5s, text-shadow 0.5s;
-}
-
+/* header style  */
 #textBox {
     max-width: 70%;
     margin: 0 auto;
@@ -48,36 +25,6 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-}
-
-/* Headings and Paragraphs */
-h2, h4, p {
-    color: aliceblue; /* Fully opaque color */
-}
-
-section {
-    padding: 20px;
-    margin: 10px;
-    text-align: left;
-    color: aliceblue; /* Fully opaque text color */
-}
-
-
-/* images */
-
-/* Background image styles */
-body:before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    z-index: -1;
-    opacity: 0.15;
 }
 
 /* Circular Image Styles */
@@ -93,6 +40,7 @@ body:before {
     top: 50px;
     right: 50px;
     margin: 0 auto;
+    animation: glowing-border 1.5s infinite;
 }
 
 .circular-img img {
@@ -102,104 +50,73 @@ body:before {
     animation: pop-in-out 2s infinite;
 }
 
-@media (max-width: 768px) {
-    .circular-img {
-        position: relative;
-        right: 0;
-        margin-top: 20px;
-        width: 25%;
-        height: auto;
-    }
-}
-
-
-/* animations */
-
-/* Animation Styles */
-@keyframes glowing {
-    0% {
-        text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #0000ff, 0 0 20px #0000ff, 0 0 25px #0000ff;
-    }
-    50% {
-        text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff;
-    }
-    100% {
-        text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #0000ff, 0 0 20px #0000ff, 0 0 25px #0000ff;
-    }
-}
-
-.textSec {
-    margin: 0 15px;
-    animation: glowing 1.5s infinite alternate;
-}
-
-/* Glowing Border Animation */
+/* Glowing Border Animation for img */
 @keyframes glowing-border {
     0% {
         box-shadow: 0 0 5px rgba(50, 50, 255, 0.5);
     }
+
     25% {
         box-shadow: 0 0 10px rgba(50, 50, 255, 1);
     }
+
     50% {
         box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
     }
+
     75% {
         box-shadow: 0 0 20px rgba(255, 0, 255, 1);
     }
+
     100% {
         box-shadow: 0 0 5px rgba(50, 50, 255, 0.5);
     }
 }
 
-
-/* Image Animation */
+/* Image Animation inside image */
 @keyframes image-animation {
     0% {
         transform: scale(1);
     }
+    
     50% {
-        transform: scale(1.05); /* Scale slightly up */
+        transform: scale(1.05);
+        /* Scale slightly up */
     }
+    
     100% {
         transform: scale(1);
     }
 }
-
 @keyframes pop-in-out {
-    0%, 100% {
-        transform: scale(1); /* Normal size */
+    
+    0%,
+    100% {
+        transform: scale(1);
+        /* Normal size */
     }
+    
     50% {
-        transform: scale(1.1); /* Slightly zoomed in */
+        transform: scale(1.1);
+        /* Slightly zoomed in */
     }
 }
 
-
-/* Apply the image animation */
-.circular-img {
-    animation: glowing-border 1.5s infinite;
-    /* animation: image-animation 2s infinite; */
-}
 
 /* footer */
 
-
-/* Footer Styles */
 footer {
     background-color: rgba(0, 0, 0, 0.7);
     color: #ffffff;
     text-align: center;
     padding: 15px;
     position: relative;
-    bottom: 0;
     width: 100%;
     box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5);
 }
 
 footer p {
     margin: 0;
-    font-size: 0.9em; /* Adjust font size if needed */
+    /* font-size: 0.9em; */
+    /* Adjust font size if needed */
 }
-
-

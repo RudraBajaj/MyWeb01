@@ -2,18 +2,26 @@
 /* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Audiowide');
 
-
 /* Prevent horizontal scrolling */
-html{
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden;
-}
-
-/* bg color  */
-body {
     background-color: RGB(24, 25, 26);
 }
 
-/* header style  */
+
+/* #content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+
 #textBox {
     max-width: 70%;
     margin: 0 auto;
@@ -27,7 +35,6 @@ body {
     justify-content: center;
 }
 
-/* Circular Image Styles */
 .circular-img {
     width: 70%;
     max-width: 200px;
@@ -39,8 +46,11 @@ body {
     position: absolute;
     top: 50px;
     right: 50px;
+    z-index: 1;
     margin: 0 auto;
     animation: glowing-border 1.5s infinite;
+    top: 30px;
+    right: 30px;
 }
 
 .circular-img img {
@@ -50,7 +60,6 @@ body {
     animation: pop-in-out 2s infinite;
 }
 
-/* Glowing Border Animation for img */
 @keyframes glowing-border {
     0% {
         box-shadow: 0 0 5px rgba(50, 50, 255, 0.5);
@@ -73,7 +82,6 @@ body {
     }
 }
 
-/* Image Animation inside image */
 @keyframes image-animation {
     0% {
         transform: scale(1);
@@ -81,13 +89,13 @@ body {
     
     50% {
         transform: scale(1.05);
-        /* Scale slightly up */
     }
     
     100% {
         transform: scale(1);
     }
 }
+
 @keyframes pop-in-out {
     
     0%,
@@ -102,15 +110,11 @@ body {
     }
 }
 
-
-/* footer */
-
 footer {
     background-color: rgba(0, 0, 0, 0.7);
     color: #ffffff;
     text-align: center;
     padding: 15px;
-    position: relative;
     width: 100%;
     box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5);
 }

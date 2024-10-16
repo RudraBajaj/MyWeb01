@@ -9,18 +9,9 @@ html, body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
     background-color: RGB(24, 25, 26);
+    overflow-x: hidden;
 }
-
-
-/* #content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-} */
 
 #textBox {
     max-width: 70%;
@@ -34,6 +25,12 @@ html, body {
     flex-flow: row wrap;
     justify-content: center;
     flex: 1;
+}
+
+main {
+    color: azure;
+    flex: 1;
+    padding: 20px;
 }
 
 .circular-img {

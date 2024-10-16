@@ -33,6 +33,7 @@ html, body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    flex: 1;
 }
 
 .circular-img {
@@ -43,7 +44,7 @@ html, body {
     overflow: hidden;
     border: 8px solid transparent;
     display: block;
-    position: absolute;
+    position: fixed;
     top: 50px;
     right: 50px;
     z-index: 1;

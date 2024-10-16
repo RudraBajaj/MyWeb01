@@ -5,9 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(() => {
         letters.forEach((letter, i) => {
             if (i === index) {
-                letter.style.color = `hsl(${Math.random() * 360}, 100%, 70%)`; // Brighter colors
+                letter.style.transform = 'translateY(-10px)';
+                letter.style.color = `hsl(${Math.random() * 360}, 100%, 70%)`;
             } else {
-                letter.style.color = '#cccccc'; // Reset other letters to light gray
+                letter.style.transform = 'translateY(0)';
+                letter.style.color = '#cccccc';
             }
         });
         index = (index + 1) % letters.length; // Loop through letters
